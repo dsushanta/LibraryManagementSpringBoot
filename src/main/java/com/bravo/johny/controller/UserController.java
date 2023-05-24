@@ -2,6 +2,7 @@ package com.bravo.johny.controller;
 
 import com.bravo.johny.controller.filterbeans.UserFilterBean;
 import com.bravo.johny.controller.filterbeans.UserIssuedBookFilterBean;
+import com.bravo.johny.dto.Role;
 import com.bravo.johny.dto.User;
 import com.bravo.johny.dto.UserIssuedBook;
 import com.bravo.johny.service.BookIssueService;
@@ -25,6 +26,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
     @Autowired
     private BookIssueService bookIssueService;
 
@@ -71,6 +73,18 @@ public class UserController {
                                   @PathVariable("userName") String userName) {
 
         user = userService.updateUserDetails(userName, user);
+        user.add(linkTo(methodOn(UserController.class)
+                .updateUserDetails(user, userName))
+                .withSelfRel());
+
+        return user;
+    }
+
+    @PatchMapping("/{userName}/changeRole")
+    public User changeUserRole(@RequestBody Role role,
+                                  @PathVariable("userName") String userName) {
+
+        var user = userService.updateUserRole(userName, role);
         user.add(linkTo(methodOn(UserController.class)
                 .updateUserDetails(user, userName))
                 .withSelfRel());
