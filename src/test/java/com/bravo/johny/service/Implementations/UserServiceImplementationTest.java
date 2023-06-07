@@ -3,7 +3,8 @@ package com.bravo.johny.service.Implementations;
 import com.bravo.johny.entity.RoleEntity;
 import com.bravo.johny.entity.UserEntity;
 import com.bravo.johny.repository.UserRepository;
-import org.junit.jupiter.api.DisplayName;
+import com.bravo.johny.utils.CustomDisplayNameGenerator;
+import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -12,6 +13,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
@@ -22,7 +24,9 @@ import static org.mockito.Mockito.lenient;
 import static org.mockito.Mockito.when;
 
 
+@DisplayNameGeneration(CustomDisplayNameGenerator.ReplaceCamelCase.class)
 @ExtendWith(MockitoExtension.class)
+@SpringBootTest
 class UserServiceImplementationTest {
 
     @Mock
@@ -32,7 +36,7 @@ class UserServiceImplementationTest {
     UserServiceImplementation userServiceImplementation;
 
 
-    @DisplayName("Test load User by Username with non-empty string")
+//    @DisplayName("Test load User by Username with non-empty string")
     @ParameterizedTest(name = "#{index} - Run test with args={0}")
     @CsvSource(value = {"'Joey'", "'Chandler'"})
     void loadUserByUsernamePositive(String userName) {
@@ -48,7 +52,7 @@ class UserServiceImplementationTest {
     }
 
 
-    @DisplayName("Test load User by Username with null or empty string")
+//    @DisplayName("Test load User by Username with null or empty string")
     @ParameterizedTest(name = "#{index} - Run test with args={0}")
     @MethodSource("blankOrNullStrings")
     void loadUserByUsernameNegative(String userName) {
