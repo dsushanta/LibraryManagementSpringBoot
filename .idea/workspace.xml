@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95db4cd5-43bc-49a0-ab7d-11880a395642" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/LibrarymanagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/LibrarymanagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/GenreController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/IssuedBooksController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/BookFilterBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/BookFilterBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/BookIssueFilterBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/BookIssueFilterBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/CopyFilterBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/CopyFilterBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/UserFilterBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/UserFilterBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/UserIssuedBookFilterBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/filterbeans/UserIssuedBookFilterBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/BookIssueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/BookIssueService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/ConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/ConfigService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/CopyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/CopyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bravo/johny/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bravo/johny/utils/CommonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bravo/johny/service/Implementations/UserServiceImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bravo/johny/service/Implementations/UserServiceImplementationTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,6 +13,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="241" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -61,20 +43,56 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop/1" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="LibraryManagement" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/bravo/johny/service/Implementations/UserServiceImplementationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+            <state relative-caret-position="286">
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3292#3293#0" expanded="true" />
                 <element signature="e#3339#3340#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bravo/johny/entity/BookEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1293">
+              <caret line="186" column="54" lean-forward="true" selection-start-line="186" selection-start-column="54" selection-end-line="186" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/bravo/johny/utils/CustomDisplayNameGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bravo/johny/service/Implementations/UserServiceImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="205">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,8 +138,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -183,8 +201,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bravo/johny/filter/CustomAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bravo/johny/config/ProjectConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bravo/johny/service/Implementations/BookIssueServiceImplementation.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/bravo/johny/utils/ReplaceCamelCase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/bravo/johny/utils/CustomDisplayNameGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bravo/johny/service/Implementations/UserServiceImplementationTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -211,7 +231,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -272,28 +292,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="bravo" type="462c0819:PsiDirectoryNode" />
               <item name="johny" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LibraryManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bravo" type="462c0819:PsiDirectoryNode" />
-              <item name="johny" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LibraryManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bravo" type="462c0819:PsiDirectoryNode" />
-              <item name="johny" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LibraryManagement" type="b2602c69:ProjectViewProjectNode" />
@@ -396,17 +394,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="bravo" type="462c0819:PsiDirectoryNode" />
               <item name="johny" type="462c0819:PsiDirectoryNode" />
-              <item name="librarymanagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LibraryManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LibraryManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bravo" type="462c0819:PsiDirectoryNode" />
-              <item name="johny" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -420,6 +407,21 @@
               <item name="johny" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="Implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LibraryManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LibraryManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bravo" type="462c0819:PsiDirectoryNode" />
+              <item name="johny" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LibraryManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -588,23 +590,11 @@
       <workItem from="1680267237136" duration="195000" />
       <workItem from="1681230267314" duration="490000" />
       <workItem from="1683632212131" duration="13509000" />
-      <workItem from="1684841689518" duration="6069000" />
+      <workItem from="1684841689518" duration="13489000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceImplementationTest_loadUserByUsernameNegative_(1) - 2023.05.24 at 15h 57m 56s.xml">
-      <configuration name="UserServiceImplementationTest.loadUserByUsernameNegative (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceImplementationTest_loadUserByUsernameNegative_(1) - 2023.05.24 at 15h 58m 19s.xml">
-      <configuration name="UserServiceImplementationTest.loadUserByUsernameNegative (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceImplementationTest_loadUserByUsernameNegative_(1) - 2023.05.24 at 15h 58m 40s.xml">
-      <configuration name="UserServiceImplementationTest.loadUserByUsernameNegative (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceImplementationTest_loadUserByUsernameNegative_(1) - 2023.05.24 at 16h 06m 11s.xml">
-      <configuration name="UserServiceImplementationTest.loadUserByUsernameNegative (1)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserServiceImplementationTest_loadUserByUsernameNegative_(1) - 2023.05.24 at 16h 07m 17s.xml">
       <configuration name="UserServiceImplementationTest.loadUserByUsernameNegative (1)" configurationId="JUnit" />
     </history-entry>
@@ -623,15 +613,27 @@
     <history-entry file="UserServiceImplementationTest - 2023.05.24 at 16h 12m 42s.xml">
       <configuration name="UserServiceImplementationTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserServiceImplementationTest - 2023.06.04 at 19h 13m 54s.xml">
+      <configuration name="UserServiceImplementationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceImplementationTest - 2023.06.04 at 19h 16m 44s.xml">
+      <configuration name="UserServiceImplementationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceImplementationTest - 2023.06.04 at 19h 25m 51s.xml">
+      <configuration name="UserServiceImplementationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceImplementationTest_loadUserByUsernamePositive - 2023.06.04 at 21h 34m 49s.xml">
+      <configuration name="UserServiceImplementationTest.loadUserByUsernamePositive" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74588000" />
+    <option name="totallyTimeSpent" value="82008000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
       <window_info anchor="top" auto_hide="true" id="Version Control" order="0" show_stripe_button="false" side_tool="true" weight="0.32961586" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49780703" visible="true" weight="0.18051118" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49780703" visible="true" weight="0.18051118" />
       <window_info id="Structure" order="1" sideWeight="0.502193" side_tool="true" weight="0.24964234" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" show_stripe_button="false" weight="0.3297568" />
@@ -642,7 +644,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32826748" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32928064" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.27659574" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.27659574" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.34200743" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -650,12 +652,13 @@
       <window_info anchor="bottom" id="REST Client" order="8" />
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Database Console" order="10" weight="0.22695035" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.31408307" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.31408307" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="15" weight="0.32928064" />
       <window_info anchor="bottom" id="Inspection Results" order="16" weight="0.32928064" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32960597" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -729,6 +732,11 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LibraryManagement$UserServiceImplementationTest.ic" NAME="UserServiceImplementationTest Coverage Results" MODIFIED="1685886945380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bravo.johny.service.Implementations.*</FILTER>
+    </SUITE>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
@@ -744,13 +752,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/CopyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/35160c29-4e7c-4dfa-8f88-8095b93e947d/console_4.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -919,16 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bravo/johny/entity/BookEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bravo/johny/controller/BookController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1082,13 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bravo/johny/repository/BookRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1106,10 +1090,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bravo/johny/entity/BookEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bravo/johny/service/Implementations/UserServiceImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="205">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/bravo/johny/utils/CustomDisplayNameGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1118,13 +1122,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bravo/johny/service/Implementations/UserServiceImplementationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        <state relative-caret-position="286">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3292#3293#0" expanded="true" />
             <element signature="e#3339#3340#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1293">
+          <caret line="186" column="54" lean-forward="true" selection-start-line="186" selection-start-column="54" selection-end-line="186" selection-end-column="54" />
         </state>
       </provider>
     </entry>
