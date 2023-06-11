@@ -63,9 +63,12 @@ public class BookIssueServiceImplementation implements BookIssueService {
         updateUserDues(bookIssue.getUserName(), 0);
         BookIssue newBookIssue = issue(bookIssue);
         CopyEntity copyEntity = copyRepository.findFirstByCopyId(copyId);
-        copyEntity.setIssued(true);
-        //copyEntity.setIsIssued(1);
-        copyRepository.save(copyEntity);
+        if(copyEntity != null){
+            copyEntity.setIssued(true);
+            //copyEntity.setIsIssued(1);
+            copyRepository.save(copyEntity);
+        }
+
         UserEntity userEntity = userRepository.findFirstByUserName(bookIssue.getUserName());
         userEntity.setBookCount(bookCount+1);
         userRepository.save(userEntity);
@@ -73,8 +76,10 @@ public class BookIssueServiceImplementation implements BookIssueService {
         copyId = isBookAvailable(bookIssue.getBookId());
         if(copyId == 0) {
             BookEntity bookEntity = bookRepository.findFirstByBookId(bookIssue.getBookId());
-            bookEntity.setAvailable(false);
-            bookRepository.save(bookEntity);
+            if(bookEntity != null){
+                bookEntity.setAvailable(false);
+                bookRepository.save(bookEntity);
+            }
         }
         return newBookIssue;
     }
@@ -143,13 +148,18 @@ public class BookIssueServiceImplementation implements BookIssueService {
         bookIssue = bookReturn(bookIssue);
 
         CopyEntity copyEntity = copyRepository.findFirstByCopyId(bookIssue.getCopyId());
-        copyEntity.setIssued(false);
-        //copyEntity.setIsIssued(0);
-        copyRepository.save(copyEntity);
+        if(copyEntity != null){
+            copyEntity.setIssued(false);
+            //copyEntity.setIsIssued(0);
+            copyRepository.save(copyEntity);
+        }
+
 
         BookEntity bookEntity = bookRepository.findFirstByBookId(bookIssue.getBookId());
-        bookEntity.setAvailable(true);
-        bookRepository.save(bookEntity);
+        if(bookEntity != null){
+            bookEntity.setAvailable(true);
+            bookRepository.save(bookEntity);
+        }
 
         UserEntity userEntity = userRepository.findFirstByUserName(bookIssue.getUserName());
 
@@ -396,14 +406,14 @@ public class BookIssueServiceImplementation implements BookIssueService {
 
         Optional<UserEntity> entity = userRepository.findByUserName(userName);
 
-        return entity.isPresent() ? true : false;
+        return entity.isPresent();
     }
 
     private boolean checkIfBookIssueEntryExists(int bookIssueId) {
 
         long count = bookLifeCycleRepository.countByBookIssueId(bookIssueId);
 
-        return count == 0 ? false : true;
+        return count != 0;
     }
 
     private boolean checkIfBookIsAlreadyReturned(int bookIssueId) {
@@ -417,21 +427,21 @@ public class BookIssueServiceImplementation implements BookIssueService {
 
         Optional<UserEntity> entity = userRepository.findByEmail(email);
 
-        return entity.isPresent() ? true : false;
+        return entity.isPresent();
     }
 
     public boolean checkIfBookExistsInDatabase(String title, String author) {
 
         List<BookEntity> bookEntities = bookRepository.findByTitleAndAuthor(title, author);
 
-        return bookEntities.size() > 0 ? true : false;
+        return bookEntities.size() > 0;
     }
 
     private boolean checkIfBookExistsInDatabase(int bookId) {
 
         Optional<BookEntity> entity = bookRepository.findByBookId(bookId);
 
-        return entity.isPresent() ? true : false;
+        return entity.isPresent();
     }
 
     private boolean checkIfBookIsAlreadyReIssued(int bookIssueId) {
