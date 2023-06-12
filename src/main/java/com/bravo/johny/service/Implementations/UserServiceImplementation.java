@@ -3,6 +3,7 @@ package com.bravo.johny.service.Implementations;
 import com.bravo.johny.dto.Role;
 import com.bravo.johny.dto.User;
 import com.bravo.johny.dto.UserRole;
+import com.bravo.johny.entity.BookEntity;
 import com.bravo.johny.entity.RoleEntity;
 import com.bravo.johny.entity.UserEntity;
 import com.bravo.johny.repository.BookLifeCycleRepository;
