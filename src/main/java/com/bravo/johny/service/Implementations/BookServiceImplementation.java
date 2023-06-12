@@ -206,14 +206,14 @@ public class BookServiceImplementation implements BookService {
 
         List<BookEntity> bookEntities = bookRepository.findByTitleAndAuthor(title, author);
 
-        return bookEntities.size() > 0 ? true : false;
+        return bookEntities.size() > 0;
     }
 
     public boolean checkIfBookExistsInDatabase(int bookId) {
 
         Optional<BookEntity> entity = bookRepository.findByBookId(bookId);
 
-        return entity.isPresent() ? true : false;
+        return entity.isPresent();
     }
 
     public boolean checkIfAnyCopyOfABookIsIssued(int bookId) {
@@ -221,14 +221,14 @@ public class BookServiceImplementation implements BookService {
         Optional<BookEntity> entityBook = bookRepository.findByBookId(bookId);
         Optional<CopyEntity> entity = copyRepository.findByBookAndIsIssued(entityBook.get(), true);
 
-        return entity.isPresent() ? true : false;
+        return entity.isPresent();
     }
 
     public boolean checkIfCopyOfABookIsIssued(int copyId) {
 
         Optional<CopyEntity> entity = copyRepository.findByCopyIdAndIsIssued(copyId, true);
 
-        return entity.isPresent() ? true : false;
+        return entity.isPresent();
     }
 
     private BookEntity prepareBookEntityFromBookDTO(Book book) {

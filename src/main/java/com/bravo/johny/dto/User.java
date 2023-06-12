@@ -8,8 +8,6 @@ import lombok.ToString;
 import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor

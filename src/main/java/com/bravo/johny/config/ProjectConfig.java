@@ -2,6 +2,8 @@ package com.bravo.johny.config;
 
 public class ProjectConfig {
 
+    private ProjectConfig(){}
+
    // public static final String DATABASE_PROPERTIES_FILE = "DatabaseConfigurations.yml";
     public static final long MILLISECONDS_IN_A_DAY = 86400000;
     public static final String SECRET = "secret";

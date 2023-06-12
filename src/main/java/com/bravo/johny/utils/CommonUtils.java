@@ -19,6 +19,8 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 public class CommonUtils {
 
+    private CommonUtils(){}
+
     public static Logger getLoggerInstance(Class loggingClass) {
         return LoggerFactory.getLogger(loggingClass);
     }
@@ -32,14 +34,12 @@ public class CommonUtils {
     }
 
     public static File getResourceAsFileObject(Object object, String resourceFilename) {
-        File file = new File(
+        return new File(
                 object.getClass()
                         .getClassLoader()
                         .getResource(resourceFilename)
                         .getFile()
         );
-
-        return file;
     }
 
     public static String getResourceFullPath(Object object, String resourceFilename) {

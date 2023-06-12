@@ -15,10 +15,8 @@ public class DataNotFoundExceptionMapper implements ExceptionMapper<DataNotFound
         String link = "https://en.wikipedia.org/wiki/HTTP_404";
         ErrorMessage errorMessage = new ErrorMessage(ex.getMessage(), 404, link);
 
-        Response errorResponse = Response.status(Response.Status.NOT_FOUND)
+        return Response.status(Response.Status.NOT_FOUND)
                 .entity(errorMessage)
                 .build();
-
-        return errorResponse;
     }
 }

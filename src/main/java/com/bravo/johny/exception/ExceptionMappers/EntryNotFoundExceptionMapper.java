@@ -15,10 +15,8 @@ public class EntryNotFoundExceptionMapper implements ExceptionMapper<EntryNotFou
         String link = "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes";
         ErrorMessage errorMessage = new ErrorMessage(ex.getMessage(), 400, link);
 
-        Response errorResponse = Response.status(Response.Status.BAD_REQUEST)
+        return Response.status(Response.Status.BAD_REQUEST)
                 .entity(errorMessage)
                 .build();
-
-        return errorResponse;
     }
 }

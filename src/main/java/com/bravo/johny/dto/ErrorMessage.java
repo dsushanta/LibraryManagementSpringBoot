@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 public class ErrorMessage {
 
-    private String errorMessage;
+    private String errMessage;
     private int errorCode;
     private String documentation;
 }

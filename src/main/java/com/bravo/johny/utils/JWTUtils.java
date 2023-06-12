@@ -20,6 +20,8 @@ import static java.util.Arrays.stream;
 
 public class JWTUtils {
 
+    private JWTUtils(){}
+
     public static String generateJWTAccessToken(HttpServletRequest request, User user){
 
         return JWT.create()
@@ -58,9 +60,7 @@ public class JWTUtils {
         var username = decodedJWT.getSubject();
         String[] roles = decodedJWT.getClaim("roles").asArray(String.class);
         Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        stream(roles).forEach(role -> {
-            authorities.add(new SimpleGrantedAuthority(role));
-        });
+        stream(roles).forEach(role -> authorities.add(new SimpleGrantedAuthority(role)));
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username, null, authorities);
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
     }

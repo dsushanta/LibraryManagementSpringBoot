@@ -100,11 +100,10 @@ public class UserController {
                 .addNewUser(user))
                 .slash(newUser.getUserName());
         newUser.add(userLink.withSelfRel());
-        Response response = Response.created(userLink.toUri())
+
+        return Response.created(userLink.toUri())
                 .entity(newUser)
                 .build();
-
-        return response;
     }
 
     @DeleteMapping("/{userName}")

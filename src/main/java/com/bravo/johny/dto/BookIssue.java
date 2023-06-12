@@ -8,8 +8,6 @@ import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @NoArgsConstructor

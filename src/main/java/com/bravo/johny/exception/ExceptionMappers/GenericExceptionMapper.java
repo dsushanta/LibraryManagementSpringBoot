@@ -14,10 +14,8 @@ public class GenericExceptionMapper implements ExceptionMapper<Throwable> {
         String link = "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes";
         ErrorMessage errorMessage = new ErrorMessage(ex.getMessage(), 500, link);
 
-        Response errorResponse = Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+        return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
                 .entity(errorMessage)
                 .build();
-
-        return errorResponse;
     }
 }

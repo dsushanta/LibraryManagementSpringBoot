@@ -1,6 +1,5 @@
 package com.bravo.johny.repository;
 
-import com.bravo.johny.dto.IssuedBook;
 import com.bravo.johny.dto.User;
 import com.bravo.johny.dto.UserIssuedBook;
 import com.bravo.johny.entity.BookEntity;

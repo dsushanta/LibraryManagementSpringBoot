@@ -3,6 +3,7 @@ package com.bravo.johny.controller;
 import com.bravo.johny.controller.filterbeans.BookIssueFilterBean;
 import com.bravo.johny.dto.BookIssue;
 import com.bravo.johny.dto.BookLifeCycleOperation;
+import com.bravo.johny.entity.UserEntity;
 import com.bravo.johny.service.BookIssueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
@@ -32,7 +33,7 @@ public class BookIssueController {
         for(BookIssue bookIssue : bookIssues) {
             bookIssue.add(linkTo(UserController.class)
                     .slash(bookIssue.getUserName())
-                    .withRel("UserEntity"));
+                    .withRel(UserEntity.class.getSimpleName()));
         }
         return bookIssues;
     }
@@ -46,7 +47,7 @@ public class BookIssueController {
             throwBadRequestRuntimeException("BookEntity Id belonging to the bookEntity issue id is different from the bookEntity id present in the URL");
         bookIssue.add(linkTo(UserController.class)
                 .slash(bookIssue.getUserName())
-                .withRel("UserEntity"));
+                .withRel(UserEntity.class.getSimpleName()));
 
         return bookIssue;
     }
@@ -58,12 +59,11 @@ public class BookIssueController {
         bookIssue.setBookId(bookId);
         bookIssue = bookIssueService.issueABook(bookIssue);
         WebMvcLinkBuilder bookIssueLink = linkTo(UserController.class).slash(bookIssue.getUserName());
-        bookIssue.add(bookIssueLink.withRel("UserEntity"));
-        Response response = Response.created(bookIssueLink.toUri())
+        bookIssue.add(bookIssueLink.withRel(UserEntity.class.getSimpleName()));
+
+        return Response.created(bookIssueLink.toUri())
                 .entity(bookIssue)
                 .build();
-
-        return response;
     }
 
     @PatchMapping("/{bookIssueId}")
@@ -83,7 +83,7 @@ public class BookIssueController {
 
         bookIssue.add(linkTo(UserController.class)
                 .slash(bookIssue.getUserName())
-                .withRel("UserEntity"));
+                .withRel(UserEntity.class.getSimpleName()));
 
         return bookIssue;
     }

@@ -208,14 +208,14 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
 
         Optional<UserEntity> entity = userRepository.findByUserName(userName);
 
-        return entity.isPresent() ? true : false;
+        return entity.isPresent();
     }
 
     private boolean checkIfEmailExistsInDatabase(String email) {
 
         Optional<UserEntity> entity = userRepository.findByEmail(email);
 
-        return entity.isPresent() ? true : false;
+        return entity.isPresent();
     }
 
     private UserEntity prepareuserEntityFromUserDTO(User user) {

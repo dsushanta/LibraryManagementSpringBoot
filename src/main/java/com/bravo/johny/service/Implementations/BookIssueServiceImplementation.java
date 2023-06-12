@@ -4,7 +4,6 @@ import com.bravo.johny.config.ProjectConfig;
 import com.bravo.johny.controller.filterbeans.BookIssueFilterBean;
 import com.bravo.johny.controller.filterbeans.UserIssuedBookFilterBean;
 import com.bravo.johny.dto.BookIssue;
-import com.bravo.johny.dto.IssuedBook;
 import com.bravo.johny.dto.UserIssuedBook;
 import com.bravo.johny.entity.*;
 import com.bravo.johny.repository.*;

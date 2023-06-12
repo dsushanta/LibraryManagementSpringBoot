@@ -72,11 +72,10 @@ public class BookController {
                 .addNewBook(book))
                 .slash(Integer.toString(book.getBookId()));
         newBook.add(bookLink.withSelfRel());
-        Response response = Response.created(bookLink.toUri())
+
+        return Response.created(bookLink.toUri())
                 .entity(newBook)
                 .build();
-
-        return response;
     }
 
     @DeleteMapping("/{bookId}")
@@ -94,7 +93,6 @@ public class BookController {
     @GetMapping("/genres")
     public List<Genre> getGenres() {
 
-        List<Genre> genres = bookService.getAllGenre();
-        return genres;
+        return bookService.getAllGenre();
     }
 }
