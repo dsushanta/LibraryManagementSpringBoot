@@ -1,5 +1,6 @@
 package com.bravo.johny.service.Implementations;
 
+import com.bravo.johny.dto.Book;
 import com.bravo.johny.dto.Role;
 import com.bravo.johny.dto.User;
 import com.bravo.johny.dto.UserRole;
@@ -247,5 +248,10 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
         user.setRole(userEntity.getRole());
 
         return user;
+    }
+
+    private void a(){
+        Book b = null;
+        b.getBookId();
     }
 }
