@@ -4,7 +4,6 @@ import com.bravo.johny.dto.Book;
 import com.bravo.johny.dto.Role;
 import com.bravo.johny.dto.User;
 import com.bravo.johny.dto.UserRole;
-import com.bravo.johny.entity.BookEntity;
 import com.bravo.johny.entity.RoleEntity;
 import com.bravo.johny.entity.UserEntity;
 import com.bravo.johny.repository.BookLifeCycleRepository;
@@ -247,13 +246,6 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
         user.setFine(userEntity.getFine());
         user.setRole(userEntity.getRole());
 
-        b();
-
         return user;
-    }
-
-    private void b(){
-        Book b = null;
-        b.getBookId();
     }
 }
