@@ -247,10 +247,12 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
         user.setFine(userEntity.getFine());
         user.setRole(userEntity.getRole());
 
+        b();
+
         return user;
     }
 
-    private void a(){
+    private void b(){
         Book b = null;
         b.getBookId();
     }
