@@ -1,0 +1,35 @@
+name: Unit-Tests
+
+on: [pull_request]
+
+jobs:
+  Unit-Tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'corretto'
+          java-version: 17
+
+      - name: Clean
+        run: mvn --batch-mode clean
+
+      - name: Build
+        run: mvn --batch-mode -DskipTests package
+
+      - name: Test
+        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+
+      - name: Generate Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Unit Tests
+          path: target/surefire-reports/*.xml
+          reporter: java-junit
+          fail-on-error: true
