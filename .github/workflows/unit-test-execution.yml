@@ -34,11 +34,13 @@ jobs:
           reporter: java-junit
           fail-on-error: true
 
-#      - name: Upload Report
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: jaccoco-report.xml
-#          path: target/site/jacoco/jaccoco-report.xml
+      - name: Generate JaCoCo badge
+        id: jacoco-gen
+        uses: cicirello/jacoco-badge-generator@v2
+        with:
+          badges-directory: badges
+          generate-branches-badge: true
+          generate-summary: true
 
       - name: Add coverage to PR
         id: jacoco
@@ -46,5 +48,5 @@ jobs:
         with:
           paths: target/site/jacoco/jacoco.xml
           token: ${{ secrets.GITHUB_TOKEN }}
-          min-coverage-overall: 2
-          min-coverage-changed-files: 2
+          min-coverage-overall: 5
+          min-coverage-changed-files: 5
