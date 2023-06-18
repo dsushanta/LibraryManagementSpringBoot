@@ -35,7 +35,7 @@ jobs:
           fail-on-error: true
 
       - name: Generate JaCoCo badge
-        id: jacoco
+        id: jacoco-gen
         uses: cicirello/jacoco-badge-generator@v2
         with:
           badges-directory: badges
