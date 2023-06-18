@@ -49,7 +49,6 @@ class UserServiceImplementationTest {
         when(userRepository.findByUserName(Mockito.anyString())).thenReturn(Optional.of(entity));
 
         assertEquals(userName, userServiceImplementation.loadUserByUsername(userName).getUsername());
-        assertFalse(true);
     }
 
 

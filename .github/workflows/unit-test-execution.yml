@@ -1,9 +1,9 @@
-name: Unit-Tests
+name: Unit Tests
 
 on: [pull_request]
 
 jobs:
-  Unit-Tests:
+  Unit Tests:
     runs-on: ubuntu-latest
 
     steps:
