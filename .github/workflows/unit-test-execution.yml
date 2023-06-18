@@ -16,8 +16,5 @@ jobs:
           distribution: 'corretto'
           java-version: 17
 
-      - name: Build
-        run: mvn build
-
       - name: Run Unit Tests
         run: mvn clean test
