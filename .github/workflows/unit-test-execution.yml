@@ -33,3 +33,12 @@ jobs:
           path: target/surefire-reports/*.xml
           reporter: java-junit
           fail-on-error: true
+
+      - name: Add coverage to PR
+        id: jacoco
+        uses: madrapps/jacoco-report@v1.3
+        with:
+          paths: ${{ github.workspace }}/target/site/jacoco/jaccoco.xml
+          token: ${{ secrets.GITHUB_TOKEN }}
+          min-coverage-overall: 2
+          min-coverage-changed-files: 2
