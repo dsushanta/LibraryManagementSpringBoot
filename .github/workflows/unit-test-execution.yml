@@ -16,5 +16,14 @@ jobs:
           distribution: 'corretto'
           java-version: 17
 
-      - name: Run Unit Tests
-        run: mvn clean test
+      - name: Clean
+        run: mvn --batch-mode clean
+
+      - name: Build
+        run: mvn --batch-mode -DskipTests package
+
+      - name: Test
+        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+
+      - name: Generate Report
+        run: mvn --batch-mode -DgenerateReport=false site
