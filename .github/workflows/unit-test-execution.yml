@@ -45,7 +45,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.organization=Sushanta.Dasgupta -Dsonar.projectKey=dsushanta
+        run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.organization=dsushanta
 
       - name: Generate Report
         uses: dorny/test-reporter@v1
