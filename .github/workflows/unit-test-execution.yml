@@ -34,13 +34,8 @@ jobs:
           reporter: java-junit
           fail-on-error: true
 
-      - name: Generate JaCoCo badge
-        id: jacoco-gen
-        uses: cicirello/jacoco-badge-generator@v2
-        with:
-          badges-directory: badges
-          generate-branches-badge: true
-          generate-summary: true
+      - name: Sonar Scanner
+        run: mvn sonar:sonar -Pcoverage
 
       - name: Add coverage to PR
         id: jacoco
