@@ -16,6 +16,20 @@ jobs:
           distribution: 'corretto'
           java-version: 17
 
+      - name: Cache SonarQube packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Cache Maven packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
       - name: Clean
         run: mvn --batch-mode clean
 
@@ -34,8 +48,11 @@ jobs:
           reporter: java-junit
           fail-on-error: true
 
-      - name: Sonar Scanner
-        run: mvn sonar:sonar -Pcoverage
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Add coverage to PR
         id: jacoco
