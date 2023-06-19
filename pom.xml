@@ -17,8 +17,8 @@
 
     <properties>
         <java.version>12</java.version>
-        <sonar.organization>dsushanta</sonar.organization>
-        <sonar.projectKey>com.bravo.johny:librarymanagement</sonar.projectKey>
+        <!--<sonar.organization>dsushanta</sonar.organization>
+        <sonar.projectKey>com.bravo.johny:librarymanagement</sonar.projectKey>-->
     </properties>
 
     <dependencies>
