@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.bravo.johny</groupId>
-    <artifactId>librarymanagement</artifactId>
+    <artifactId>LibraryManagementSpringBoot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>librarymanagement</name>
+    <name>LibraryManagementSpringBoot</name>
     <description>REST API Project for Library Management</description>
 
     <properties>

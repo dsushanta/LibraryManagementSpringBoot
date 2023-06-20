@@ -16,19 +16,19 @@ jobs:
           distribution: 'corretto'
           java-version: 17
 
-#      - name: Cache SonarQube packages
-#        uses: actions/cache@v1
-#        with:
-#          path: ~/.sonar/cache
-#          key: ${{ runner.os }}-sonar
-#          restore-keys: ${{ runner.os }}-sonar
-#
-#      - name: Cache Maven packages
-#        uses: actions/cache@v1
-#        with:
-#          path: ~/.m2
-#          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-#          restore-keys: ${{ runner.os }}-m2
+      - name: Cache SonarQube packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Cache Maven packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
 
       - name: Clean
         run: mvn --batch-mode clean
@@ -40,12 +40,11 @@ jobs:
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
 
       - name: SonarCloud Scan
-#        uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if anyy
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+        run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=dsushanta_LibraryManagementSpringBoot -Dsonar.organization=dsushanta
 
       - name: Generate Report
         uses: dorny/test-reporter@v1
