@@ -40,12 +40,12 @@ jobs:
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
 
       - name: SonarCloud Scan
-#        uses: SonarSource/sonarcloud-github-action@master
+        uses: sonarsource/sonarcloud-github-action@v1.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+#        run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 
       - name: Generate Report
         uses: dorny/test-reporter@v1
