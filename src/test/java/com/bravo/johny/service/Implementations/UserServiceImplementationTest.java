@@ -62,7 +62,7 @@ class UserServiceImplementationTest {
 
         var exception = assertThrows(ResponseStatusException.class, ()->userServiceImplementation.loadUserByUsername(userName));
 
-        assertTrue(exception.getReason().startsWith("No User found with Username"));
+        assertTrue(exception.getReason().startsWith("No User found with username"));
     }
 
 
