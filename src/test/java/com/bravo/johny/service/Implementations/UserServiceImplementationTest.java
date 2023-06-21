@@ -65,6 +65,21 @@ class UserServiceImplementationTest {
         assertTrue(exception.getReason().startsWith("No User found with username"));
     }
 
+    @ParameterizedTest(name = "#{index} - Run test with args={0}")
+    @CsvSource(value = {"'Joey'", "'Chandler'"})
+    void getUserDetailsPositive(String userName) {
+
+        UserEntity entity = new UserEntity();
+        entity.setUserName(userName);
+        entity.setRole(new RoleEntity(1,"User"));
+        entity.setPassword("pwd");
+        entity.setBookCount(1);
+        entity.setFine(1);
+
+        when(userRepository.findByUserName(Mockito.anyString())).thenReturn(Optional.of(entity));
+
+        assertEquals(userName, userServiceImplementation.getUserDetails(userName).getUserName());
+    }
 
 
     // -----------------------------  HELPER METHODS  --------------------------------------
